@@ -1,0 +1,44 @@
+apply plugin: 'java'
+apply plugin: 'war'
+
+buildscript {
+    repositories {
+        mavenLocal()
+        mavenCentral()
+        jcenter()
+    }
+}
+
+repositories {
+
+    maven {
+        url 'https://repo.spring.io/snapshot'
+    }
+
+    mavenLocal()
+    mavenCentral()
+    jcenter()
+}
+
+war {
+    archiveBaseName = project.name + "-[VERSION]"
+    zip64 true
+}
+
+task fatjar(type: Jar) {
+    from {
+        configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) }
+    }
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+    archiveBaseName = project.name + "-[VERSION]"
+    zip64 true
+}
+
+compileJava {
+    options.encoding = 'UTF-8'
+    options.compilerArgs << "-Xlint:unchecked" << "-Xlint:deprecation"
+}
+
+dependencies {
+[DEPENDENCIES]
+}

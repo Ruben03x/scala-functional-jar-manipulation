@@ -81,6 +81,44 @@ Creates `target/universal/java-lib-detect-<ver>.zip` with platform launch script
 
 ---
 
+## Manual labelled dataset example (no Gradle)
+
+Manual method
+
+Example:
+
+```
+dataset/
+├── guava-33.1.0/
+│   └── guava-33.1.0-jre.jar
+└── guava-33.1.0.zip         ← zipped copy (optional)
+```
+
+### Derive
+
+```powershell
+sbt "run derive dataset/guava-33.1.0.zip \
+     --label guava-33.1.0 \
+     --output-db dataset/vector.db"
+```
+
+### Detect
+
+```powershell
+sbt "run detect dataset/guava-33.1.0.zip \
+     --input-db dataset/vector.db \
+     --threshold 0.1"
+```
+
+Sample output:
+
+```
+Matches (>= 0.1):
+  - guava-33.1.0 (similarity = 1.000)
+```
+
+---
+
 ## Project layout
 
 ```
@@ -89,3 +127,4 @@ src/
   test/scala/      ── ScalaTest suites
   test/resources   ── fixture class files (Test1.class …)
 ```
+
