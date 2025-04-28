@@ -765,3 +765,180 @@ WARNING: empty definition using pc, found symbol in pc: `<none>`. (full report a
 2025.04.28 09:57:02 INFO  Shut down connection with build server.
 2025.04.28 09:57:02 INFO  Shut down connection with build server.
 2025.04.28 09:57:02 INFO  Exiting server
+2025.04.28 09:57:11 INFO  Started: Metals version 1.5.2 in folders 'C:\Users\ruben\Downloads\Functional\Assignment 2' for client Visual Studio Code 1.99.3.
+2025.04.28 09:57:12 INFO  Attempting to connect to the build server...
+2025.04.28 09:57:12 INFO  Found a Bloop server running
+2025.04.28 09:57:12 INFO  no build target found for C:\Users\ruben\Downloads\Functional\Assignment 2\src\main\scala\VectorDatabase.scala. Using presentation compiler with project's scala-library version: 3.3.5
+2025.04.28 09:57:13 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\ruben\Downloads\Functional\Assignment 2\.metals\bsp.trace.json or C:\Users\ruben\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2025.04.28 09:57:13 INFO  Attempting to connect to the build server...
+2025.04.28 09:57:13 INFO  Found a Bloop server running
+2025.04.28 09:57:13 INFO  Attempting to connect to the build server...
+2025.04.28 09:57:13 INFO  Found a Bloop server running
+2025.04.28 09:57:14 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\ruben\Downloads\Functional\Assignment 2\project\project\.metals\bsp.trace.json or C:\Users\ruben\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2025.04.28 09:57:14 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\ruben\Downloads\Functional\Assignment 2\project\.metals\bsp.trace.json or C:\Users\ruben\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2025.04.28 09:57:14 INFO  time: Connected to build server in 1.75s
+2025.04.28 09:57:14 INFO  Connected to Build server: Bloop v2.0.9
+2025.04.28 09:57:14 INFO  time: Imported build in 0.13s
+2025.04.28 09:57:23 INFO  time: indexed workspace in 8.95s
+2025.04.28 09:57:23 INFO  compiling assignment-2 (7 scala sources)
+2025.04.28 09:57:27 INFO  time: compiled assignment-2 in 4.15s
+2025.04.28 09:57:27 INFO  compiling assignment-2-test (5 scala sources)
+2025.04.28 09:57:29 INFO  time: compiled assignment-2-test in 1.8s
+2025.04.28 09:58:44 ERROR scalafmt: C:\Users\ruben\Downloads\Functional\Assignment 2\src\main\scala\Derive.scala:67: error: [dialect scala3] illegal start of statement
+  private def mergeVectors(a: SparseVector, b: SparseVector): SparseVector =
+  ^
+2025.04.28 09:58:56 INFO  compiling assignment-2 (1 scala source)
+Apr 28, 2025 9:58:56 AM scala.meta.internal.metals.StdReporter $anonfun$create$1
+WARNING: empty definition using pc, found symbol in pc: `<none>`. (full report at: C:\Users\ruben\Downloads\Functional\Assignment 2\.metals\.reports\metals-full\2025-04-28\r_empty-definition_(assignment-2)_09-00-46-961.md)
+2025.04.28 09:58:58 INFO  time: compiled assignment-2 in 2.41s
+2025.04.28 09:59:11 INFO  compiling assignment-2 (1 scala source)
+2025.04.28 09:59:11 INFO  time: compiled assignment-2 in 0.9s
+Apr 28, 2025 10:01:34 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 242
+Apr 28, 2025 10:01:34 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 241
+2025.04.28 10:01:37 INFO  compiling assignment-2 (1 scala source)
+2025.04.28 10:01:39 INFO  time: compiled assignment-2 in 2.75s
+Apr 28, 2025 10:01:48 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 269
+Apr 28, 2025 10:01:50 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 274
+Apr 28, 2025 10:02:40 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 286
+2025.04.28 10:03:04 INFO  compiling assignment-2-test (1 scala source)
+2025.04.28 10:03:04 INFO  time: compiled assignment-2-test in 0.79s
+2025.04.28 10:03:36 INFO  compiling assignment-2-test (1 scala source)
+2025.04.28 10:03:36 INFO  time: compiled assignment-2-test in 0.5s
+Apr 28, 2025 10:04:23 AM scala.meta.internal.metals.StdReporter $anonfun$create$1
+WARNING: empty definition using pc, found symbol in pc: `<none>`. (full report at: C:\Users\ruben\Downloads\Functional\Assignment 2\.metals\.reports\metals-full\2025-04-28\r_empty-definition_(assignment-2)_09-00-46-961.md)
+Apr 28, 2025 10:04:24 AM scala.meta.internal.metals.StdReporter $anonfun$create$1
+WARNING: empty definition using pc, found symbol in pc: `<none>`. (full report at: C:\Users\ruben\Downloads\Functional\Assignment 2\.metals\.reports\metals-full\2025-04-28\r_empty-definition_(assignment-2)_09-00-46-961.md)
+2025.04.28 10:04:24 INFO  compiling assignment-2-test (1 scala source)
+2025.04.28 10:04:24 INFO  time: compiled assignment-2-test in 0.55s
+Apr 28, 2025 10:04:26 AM scala.meta.internal.metals.StdReporter $anonfun$create$1
+WARNING: empty definition using pc, found symbol in pc: `<none>`. (full report at: C:\Users\ruben\Downloads\Functional\Assignment 2\.metals\.reports\metals-full\2025-04-28\r_empty-definition_(assignment-2)_09-00-46-961.md)
+2025.04.28 10:04:27 INFO  compiling assignment-2-test (1 scala source)
+2025.04.28 10:04:27 INFO  time: compiled assignment-2-test in 0.57s
+2025.04.28 10:04:46 INFO  compiling assignment-2-test (1 scala source)
+2025.04.28 10:04:46 INFO  time: compiled assignment-2-test in 0.45s
+2025.04.28 10:04:48 INFO  compiling assignment-2-test (1 scala source)
+2025.04.28 10:04:48 INFO  time: compiled assignment-2-test in 0.41s
+Apr 28, 2025 10:05:33 AM scala.meta.internal.metals.StdReporter $anonfun$create$1
+WARNING: empty definition using pc, found symbol in pc: `<none>`. (full report at: C:\Users\ruben\Downloads\Functional\Assignment 2\.metals\.reports\metals-full\2025-04-28\r_empty-definition_(assignment-2)_09-00-46-961.md)
+2025.04.28 10:05:33 INFO  compiling assignment-2-test (1 scala source)
+Apr 28, 2025 10:05:33 AM scala.meta.internal.metals.StdReporter $anonfun$create$1
+WARNING: empty definition using pc, found symbol in pc: `<none>`. (full report at: C:\Users\ruben\Downloads\Functional\Assignment 2\.metals\.reports\metals-full\2025-04-28\r_empty-definition_(assignment-2)_09-00-46-961.md)
+2025.04.28 10:05:33 INFO  time: compiled assignment-2-test in 0.57s
+Apr 28, 2025 10:05:41 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 623
+Apr 28, 2025 10:05:41 AM scala.meta.internal.metals.StdReporter $anonfun$create$1
+WARNING: empty definition using pc, found symbol in pc: `<none>`. (full report at: C:\Users\ruben\Downloads\Functional\Assignment 2\.metals\.reports\metals-full\2025-04-28\r_empty-definition_(assignment-2)_09-00-46-961.md)
+2025.04.28 10:05:42 INFO  compiling assignment-2-test (1 scala source)
+2025.04.28 10:05:42 INFO  time: compiled assignment-2-test in 0.41s
+Apr 28, 2025 10:06:05 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleNotification
+WARNING: Notification threw an exception: {
+  "jsonrpc": "2.0",
+  "method": "metals/didFocusTextDocument",
+  "params": [
+    "vscode-chat-code-block://2f38d3a3-b0e7-4a56-9ccc-71eb855999f5/response_df425bb2-183a-4654-9884-c809ab7d09c8/0#%7B%22references%22%3A%5B%7B%22uri%22%3A%7B%22%24mid%22%3A1%2C%22fsPath%22%3A%22c%3A%5C%5CUsers%5C%5Cruben%5C%5CDownloads%5C%5CFunctional%5C%5CAssignment%202%5C%5Csrc%5C%5Ctest%5C%5Cscala%5C%5CDeriveDetectSpec.scala%22%2C%22_sep%22%3A1%2C%22external%22%3A%22file%3A%2F%2F%2Fc%253A%2FUsers%2Fruben%2FDownloads%2FFunctional%2FAssignment%25202%2Fsrc%2Ftest%2Fscala%2FDeriveDetectSpec.scala%22%2C%22path%22%3A%22%2Fc%3A%2FUsers%2Fruben%2FDownloads%2FFunctional%2FAssignment%202%2Fsrc%2Ftest%2Fscala%2FDeriveDetectSpec.scala%22%2C%22scheme%22%3A%22file%22%7D%7D%5D%7D"
+  ]
+}
+java.nio.file.FileSystemNotFoundException: Provider "vscode-chat-code-block" not installed
+	at java.base/java.nio.file.Path.of(Path.java:213)
+	at java.base/java.nio.file.Paths.get(Paths.java:98)
+	at scala.meta.internal.mtags.MtagsEnrichments$XtensionURIMtags.toAbsolutePath(MtagsEnrichments.scala:130)
+	at scala.meta.internal.mtags.MtagsEnrichments$XtensionStringMtags.toAbsolutePath(MtagsEnrichments.scala:190)
+	at scala.meta.internal.metals.MetalsEnrichments$XtensionString.toAbsolutePath(MetalsEnrichments.scala:777)
+	at scala.meta.internal.metals.MetalsEnrichments$XtensionString.toAbsolutePath(MetalsEnrichments.scala:774)
+	at scala.meta.internal.metals.WorkspaceLspService.didFocus(WorkspaceLspService.scala:775)
+	at scala.meta.metals.lsp.DelegatingScalaService.didFocus(DelegatingScalaService.scala:42)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$recursiveFindRpcMethods$0(GenericEndpoint.java:65)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.notify(GenericEndpoint.java:160)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleNotification(RemoteEndpoint.java:231)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:198)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:185)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:97)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:114)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+
+Apr 28, 2025 10:06:21 AM scala.meta.internal.metals.StdReporter $anonfun$create$1
+WARNING: empty definition using pc, found symbol in pc: `<none>`. (full report at: C:\Users\ruben\Downloads\Functional\Assignment 2\.metals\.reports\metals-full\2025-04-28\r_empty-definition_(assignment-2)_09-00-46-961.md)
+Apr 28, 2025 10:06:21 AM scala.meta.internal.metals.StdReporter $anonfun$create$1
+WARNING: empty definition using pc, found symbol in pc: `<none>`. (full report at: C:\Users\ruben\Downloads\Functional\Assignment 2\.metals\.reports\metals-full\2025-04-28\r_empty-definition_(assignment-2)_09-00-46-961.md)
+2025.04.28 10:06:23 INFO  compiling assignment-2-test (1 scala source)
+2025.04.28 10:06:24 INFO  time: compiled assignment-2-test in 1.38s
+2025.04.28 10:06:29 INFO  compiling assignment-2-test (1 scala source)
+Apr 28, 2025 10:06:29 AM scala.meta.internal.metals.StdReporter $anonfun$create$1
+WARNING: empty definition using pc, found symbol in pc: `<none>`. (full report at: C:\Users\ruben\Downloads\Functional\Assignment 2\.metals\.reports\metals-full\2025-04-28\r_empty-definition_(assignment-2)_09-00-46-961.md)
+Apr 28, 2025 10:06:29 AM scala.meta.internal.metals.StdReporter $anonfun$create$1
+WARNING: empty definition using pc, found symbol in pc: `<none>`. (full report at: C:\Users\ruben\Downloads\Functional\Assignment 2\.metals\.reports\metals-full\2025-04-28\r_empty-definition_(assignment-2)_09-00-46-961.md)
+Apr 28, 2025 10:06:29 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 697
+Exception in thread "pool-8-thread-1" java.lang.InterruptedException
+	at scala.meta.internal.metals.FutureCancelToken.checkCanceled(FutureCancelToken.scala:29)
+	at scala.meta.internal.pc.CompilerAccess.onCompilerJobQueue$$anonfun$1(CompilerAccess.scala:244)
+	at scala.meta.internal.pc.CompilerJobQueue$Job.run(CompilerJobQueue.scala:153)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2025.04.28 10:06:29 INFO  time: compiled assignment-2-test in 0.66s
+Exception in thread "pool-8-thread-2" java.lang.InterruptedException
+	at scala.meta.internal.metals.FutureCancelToken.checkCanceled(FutureCancelToken.scala:29)
+	at scala.meta.internal.pc.CompilerAccess.onCompilerJobQueue$$anonfun$1(CompilerAccess.scala:244)
+	at scala.meta.internal.pc.CompilerJobQueue$Job.run(CompilerJobQueue.scala:153)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Apr 28, 2025 10:06:46 AM scala.meta.internal.metals.StdReporter $anonfun$create$1
+WARNING: empty definition using pc, found symbol in pc: `<none>`. (full report at: C:\Users\ruben\Downloads\Functional\Assignment 2\.metals\.reports\metals-full\2025-04-28\r_empty-definition_(assignment-2)_09-00-46-961.md)
+2025.04.28 10:06:52 INFO  compiling assignment-2 (1 scala source)
+2025.04.28 10:06:52 INFO  time: compiled assignment-2 in 0.25s
+2025.04.28 10:06:57 INFO  compiling assignment-2 (1 scala source)
+2025.04.28 10:06:57 INFO  time: compiled assignment-2 in 0.23s
+2025.04.28 10:07:05 INFO  compiling assignment-2 (1 scala source)
+2025.04.28 10:07:05 INFO  compiling assignment-2-test (1 scala source)
+2025.04.28 10:07:05 INFO  time: compiled assignment-2 in 0.77s
+2025.04.28 10:07:07 INFO  time: compiled assignment-2-test in 0.57s
+2025.04.28 10:07:08 INFO  compiling assignment-2-test (1 scala source)
+2025.04.28 10:07:08 INFO  time: compiled assignment-2-test in 0.53s
+2025.04.28 10:08:03 INFO  compiling assignment-2-test (1 scala source)
+2025.04.28 10:08:03 INFO  time: compiled assignment-2-test in 0.49s
+2025.04.28 10:09:18 INFO  compiling assignment-2-test (1 scala source)
+2025.04.28 10:09:18 INFO  time: compiled assignment-2-test in 0.5s
+Apr 28, 2025 10:09:50 AM scala.meta.internal.metals.StdReporter $anonfun$create$1
+WARNING: empty definition using pc, found symbol in pc: `<none>`. (full report at: C:\Users\ruben\Downloads\Functional\Assignment 2\.metals\.reports\metals-full\2025-04-28\r_empty-definition_(assignment-2)_09-00-46-961.md)
+Apr 28, 2025 10:09:50 AM scala.meta.internal.metals.StdReporter $anonfun$create$1
+WARNING: empty definition using pc, found symbol in pc: `<none>`. (full report at: C:\Users\ruben\Downloads\Functional\Assignment 2\.metals\.reports\metals-full\2025-04-28\r_empty-definition_(assignment-2)_09-00-46-961.md)
+Apr 28, 2025 10:09:51 AM scala.meta.internal.metals.StdReporter $anonfun$create$1
+WARNING: empty definition using pc, found symbol in pc: `<none>`. (full report at: C:\Users\ruben\Downloads\Functional\Assignment 2\.metals\.reports\metals-full\2025-04-28\r_empty-definition_(assignment-2)_09-00-46-961.md)
+2025.04.28 10:09:52 INFO  compiling assignment-2-test (1 scala source)
+2025.04.28 10:09:52 INFO  time: compiled assignment-2-test in 0.94s
+2025.04.28 10:10:01 INFO  compiling assignment-2-test (1 scala source)
+2025.04.28 10:10:01 INFO  time: compiled assignment-2-test in 0.89s
+Apr 28, 2025 10:10:24 AM scala.meta.internal.metals.StdReporter $anonfun$create$1
+WARNING: empty definition using pc, found symbol in pc: `<none>`. (full report at: C:\Users\ruben\Downloads\Functional\Assignment 2\.metals\.reports\metals-full\2025-04-28\r_empty-definition_(assignment-2)_09-00-46-961.md)
+2025.04.28 10:10:43 INFO  compiling assignment-2 (1 scala source)
+2025.04.28 10:10:43 INFO  time: compiled assignment-2 in 0.28s
+2025.04.28 10:10:47 INFO  compiling assignment-2 (1 scala source)
+2025.04.28 10:10:47 INFO  time: compiled assignment-2 in 0.53s
+2025.04.28 10:10:47 INFO  compiling assignment-2-test (1 scala source)
+2025.04.28 10:10:47 INFO  time: compiled assignment-2-test in 0.46s
+2025.04.28 10:10:50 INFO  compiling assignment-2-test (1 scala source)
+2025.04.28 10:10:50 INFO  time: compiled assignment-2-test in 0.56s
+2025.04.28 10:10:59 INFO  compiling assignment-2 (1 scala source)
+2025.04.28 10:10:59 INFO  time: compiled assignment-2 in 0.23s
+2025.04.28 10:11:05 INFO  compiling assignment-2 (1 scala source)
+2025.04.28 10:11:05 INFO  time: compiled assignment-2-test in 13ms
+2025.04.28 10:11:05 INFO  time: compiled assignment-2 in 0.48s
+2025.04.28 10:11:41 INFO  compiling assignment-2 (1 scala source)
+2025.04.28 10:11:41 INFO  time: compiled assignment-2 in 0.69s
+2025.04.28 10:13:57 INFO  compiling assignment-2-test (1 scala source)
+2025.04.28 10:13:57 INFO  time: compiled assignment-2-test in 0.95s
+2025.04.28 10:14:07 INFO  compiling assignment-2-test (1 scala source)
+2025.04.28 10:14:07 INFO  time: compiled assignment-2-test in 0.71s
