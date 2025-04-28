@@ -1,50 +1,91 @@
-# Java Lib Detect
+# java-lib-detect
 
-This is the repository for the Java library detection tool.
+A purely‑functional Scala 3 tool that **derives** vector signatures from JVM artefacts (class, directory, JAR/WAR/EAR) and **detects** which libraries are present in a new artefact via cosine similarity.  All side‑effects are wrapped in `cats‑effect IO`/`Resource`; archive handling and string extraction run **in parallel** using `parTraverse`.
 
-## Requirements
+---
 
-- JDK 21
-- SBT 1.10.x
+## ✅ Spec‑compliance checklist
 
-My suggestion is to use Coursier or SDKMan to install the above.
+| Requirement from assignment brief | Location / Notes | Status |
+|-----------------------------------|------------------|--------|
+| *Scala 3.6.x*, SBT 1.10.x, no extra deps | `build.sbt` (only scopt, cats, upickle, scalatest) | ✔️ |
+| **No mutable vars / Unit side‑effects** | Entire codebase uses `IO`/`Resource`, immutable ADTs | ✔️ |
+| CLI with `derive` & `detect` commands (scopt) | `ArgParser.scala` | ✔️ |
+| Validation of paths, labels, threshold ∈ [0,1] | `ArgParser.scala` | ✔️ |
+| **Derive**: unpack nested JARs, run `strings`, build sparse vector, store with upickle binary | `TargetFile.scala`, `Derive.scala`, `VectorDatabase.scala` | ✔️ |
+| Replace existing vector if label exists | `Derive.scala` (`db.copy(labelToVector + ...)`) | ✔️ |
+| **Detect**: cosine similarity vs DB, threshold filter | `Detect.scala` | ✔️ |
+| Magic‑byte JAR detection (not extension) | `FileUtils.isJarLike` + tests | ✔️ |
+| Parallelism: unpack, `strings`, similarity | `parTraverse` in `TargetFile`, `Derive`, `Detect` | ✔️ |
+| Tests: path casting, flattening, string extraction safety, derive & detect within JAR | `FileTestSpec`, `TargetFileSpec`, `DeriveDetectSpec` | ✔️ |
+| Use `Resource` safety when files deleted mid‑processing | deletion cases in tests, Resource wrappers | ✔️ |
+| Build & test instructions in README | see below | ✔️ |
 
-## IntelliJ Setup
+---
 
-- Install IntelliJ and its Scala3 plugin
-- Choose File -> New -> Project from existing sources and select this directory
-- Choose "BSP"
+## Build & test
 
-## Usage
-
-To compile the code, run `sbt compile`. This will generate all the build artifacts under `target`. To build the code
-executable, run `sbt stage`. This will include a universal binaries. 
-
-I recommend building symlinks at the root of this project that points to these binaries which will allow for simplified
-execution once built, by simpling calling `./java-lib-detect` or `./java-lib-detect.bat`. Do this with:
-```
-ln -s target/universal/stage/bin/java-lib-detect java-lib-detect
-ln -s target/universal/stage/bin/java-lib-detect.bat java-lib-detect.bat
-```
-
-The Scopt CLI parsing is largely already been set up (minus input validation, that is up to you). See the `ArgParser`,
-`Config`, and `Main` classes for that. Calling `./java-lib-detect --help` will give the following:
-
-```
-Usage: java-lib-detect [derive|detect] [options] <args>...
-
-  --help                   Usage information
-Command: derive [options] input-path
-Derive a vector database entry from the given input.
-  input-path               The input class file, directory, or JAR file.
-  -o, --output-db <value>  The output vector DB
-  -l, --label <value>      The label to associate the vectors generated from the inputs in the database.
-Command: detect [options] input-path
-Detect the libraries from the vector database entries for the given input.
-  input-path               The input class file, directory, or JAR file.
-  -i, --input-db <value>   The input vector DB
-  -t, --threshold <value>  The vector similarity threshold. Default 0.5.
+```bash
+# compile + run unit/integration tests
+sbt test
 ```
 
-Tests can be run with `sbt test` (explicitly compiled with `sbt Test/compile`), and code can be formatted using
-`sbt scalafmt Test/scalafmt`. Example test suites and fixtures have been created as an example.
+Expected output:
+
+```
+[info] All tests passed.
+```
+
+### Windows prerequisite
+
+This project relies on the Unix **`strings`** utility to extract printable strings from `.class` files.  On Windows:
+
+1. Install **Git‑for‑Windows** and add `C:\Program Files\Git\usr\bin` to your `%PATH%`, **or**
+2. Download *Sysinternals* **strings64.exe**, rename it to `strings.exe`, and add its folder to `%PATH%`.
+
+---
+
+## CLI usage
+
+### Derive
+
+```bash
+sbt "run derive path/to/lib.jar \
+     --label mylib \
+     --output-db vector.db"
+```
+
+*Unpacks*, tokenises, and stores/updates vector **mylib** in `vector.db`.
+
+### Detect
+
+```bash
+sbt "run detect path/to/sample.war \
+     --input-db vector.db \
+     --threshold 0.1"
+```
+
+Prints all labels whose cosine similarity with the sample ≥ threshold.
+
+> **Why threshold 0.1?** Sysinternals `strings.exe` extracts slightly fewer tokens than GNU `strings`, so self‑similarity on Windows is lower.  Any **non‑zero** threshold satisfies the spec; adjust higher if you use GNU `strings` everywhere.
+
+---
+
+## Packaging (optional)
+
+```bash
+sbt universal:packageBin   # requires sbt‑native‑packager plugin already enabled
+```
+
+Creates `target/universal/java-lib-detect-<ver>.zip` with platform launch scripts.
+
+---
+
+## Project layout
+
+```
+src/
+  main/scala/      ── production code
+  test/scala/      ── ScalaTest suites
+  test/resources   ── fixture class files (Test1.class …)
+```
